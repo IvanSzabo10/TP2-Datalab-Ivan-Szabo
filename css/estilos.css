@@ -1,0 +1,159 @@
+/* ---------------------------- IMPORTACIÓN DE FUENTES ---------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+    font-family: 'MiFuente';
+    src: url('../Fuentes/fuente1.ttf') format('truetype');
+}
+
+/* ---------------------------- ESTILOS GENERALES ---------------------------- */
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: #1a1a2e;
+    margin: 10px;
+    background-color: #f4f4f9;
+}
+
+h1 {
+    font-family: 'MiFuente';
+    font-size: 80px;
+    animation: aparecer 2s steps(10);
+    margin: 20px 0;
+    color: #0d0729;
+}
+
+h2 {
+    margin: 40px 0 20px 40px;
+    font-size: 30px;
+    font-weight: 900;
+    color: #070536;
+}
+
+/* ---------------------------- ESTRUCTURA GENERAL ---------------------------- */
+header, nav, footer {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #070536;
+    color: #f4f4f9;
+    padding: 20px 10px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 30px 0 0 0;
+    color: #ffffff;
+}
+
+footer {
+    background-color: #0d0729;
+    color: #f4f4f9;
+    padding: 20px;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* ---------------------------- NAVEGACIÓN ---------------------------- */
+nav {
+    background-color: #999bbe;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #070536;
+    font-weight: 700;
+    text-decoration: none;
+    margin-left: 15px;
+    text-align: right;
+    padding: 5px 10px;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+}
+
+nav a:hover {
+    transform: scale(1.05);
+    color: #fff;
+    background: #070536;
+}
+
+nav b {
+    color: #f4f4f9;
+    font-weight: 700;
+    text-decoration: none;
+    margin-right: auto;
+    text-align: left;
+    font-size: 18px;
+}
+
+/* ---------------------------- ANIMACIONES ---------------------------- */
+@keyframes aparecer {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* ---------------------------- PORTFOLIO ---------------------------- */
+#portfolio #grid-galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    justify-items: center;
+    align-content: center;
+    background-color: #f4f4f9;
+}
+
+#portfolio #grid-galeria img {
+    font-family: 'MiFuente';
+    font-size: 80px;
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#portfolio #grid-galeria img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* ---------------------------- SERVICIOS ---------------------------- */
+#servicios .grid {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    background-color: #f4f4f9;
+    align-items: start;
+    justify-items: center;
+}
+
+#servicios .grid .proyecto {
+    width: 100%;
+    max-width: 400px;
+    height: 200px;
+    background-color: #f4f4f9;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: box-shadow 0.5s linear;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#servicios .grid .proyecto:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
