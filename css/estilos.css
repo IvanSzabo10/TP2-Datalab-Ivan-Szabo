@@ -3,12 +3,12 @@
 
 @font-face {
     font-family: 'MiFuente';
-    src: url('../Fuentes/fuente1.ttf') format('truetype');
+    src: url('../Fuentes/fuente1.ttf') 
 }
 
 /* ---------------------------- ESTILOS GENERALES ---------------------------- */
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat';
     font-weight: 400;
     color: #1a1a2e;
     margin: 10px;
@@ -27,6 +27,7 @@ h2 {
     margin: 40px 0 20px 40px;
     font-size: 30px;
     font-weight: 900;
+    font-style: italic;
     color: #070536;
 }
 
@@ -102,6 +103,11 @@ nav b {
 #portfolio #grid-galeria {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+/*
+Crea una cuadrícula flexible y responsiva con columnas mínimas de 280px. Uso 2 funciones que busque para adaptra mejor mi grilla
+uso auto-fit para llenar el contenedor con tantas columnas como sea posible, ajustando automáticamente el número de columnas según el espacio disponible.
+uso minmax(280px, 1fr) para definir que cada columna debe tener al menos 280px de ancho, pero puede crecer hasta ocupar una fracción igual del espacio restante (1fr).
+*/
     gap: 20px;
     padding: 40px;
     justify-items: center;
