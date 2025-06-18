@@ -135,13 +135,12 @@ uso minmax(280px, 1fr) para definir que cada columna debe tener al menos 280px d
 /* ---------------------------- SERVICIOS ---------------------------- */
 #servicios .grid {
     margin-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
-    padding: 40px;
+    padding: 20px;
     background-color: #f4f4f9;
-    align-items: start;
-    justify-items: center;
 }
 
 #servicios .grid .proyecto {
